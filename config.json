@@ -1,0 +1,4 @@
+{
+    "postgres" : "localhost:5432",
+    "comission_of_transfer" : 5.0
+}
