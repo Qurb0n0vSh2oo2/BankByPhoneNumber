@@ -20,5 +20,5 @@ func (t *Transport) TopUpBankAccount() {
 		fmt.Println(err)
 		return
 	}
-	fmt.Println("Уcпешно снято!")
+	fmt.Println("Уcпешное пополнение!")
 }

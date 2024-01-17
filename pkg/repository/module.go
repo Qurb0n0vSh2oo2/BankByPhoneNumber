@@ -22,7 +22,7 @@ type RepositoryInterface interface {
 	TransferMoneyToRecipient(senderPhoneNumber string, amount float64) (err error)
 	GetPercent() float64
 	TopUpProfitAccount(amount float64)
-	Transfer(sender, recipient string, amount float64) (err error)
+	Transfer(sender models.Account, recipient models.Account, amount float64) (err error)
 }
 
 func NewRepository(conn *pgx.Conn, percent config.Config) *Repository {

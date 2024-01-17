@@ -15,7 +15,7 @@ type ServiceInterface interface {
 	CreateBankAccount(account models.Account) error
 	WithdrawBankAccount(phoneNumber string, amount float64) (err error)
 	TopUpBankAccount(phoneNumber string, amount float64) (err error)
-	TransferMoney(senderPhoneNumber, recipientPhoneNumber string, amount float64) (err error)
+	TransferMoney(sender models.Account, recipient models.Account, amount float64) (err error)
 }
 
 func NewService(repo repository.RepositoryInterface, percent config.Config) ServiceInterface {
